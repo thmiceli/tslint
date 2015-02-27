@@ -272,9 +272,9 @@ class OneLineWalker extends Lint.RuleWalker {
     // {
     //     ...
     // }
-    private multilineAndAlignedBrace(parentStmt: ts.tsNode,
-                                     closeParen: ts.tsNode,
-                                     openBrace: ts.tsNode): boolean {
+    private multilineAndAlignedBrace(parentStmt: ts.Node,
+                                     closeParen: ts.Node,
+                                     openBrace: ts.Node): boolean {
         return !this.sameLine(parentStmt.getChildAt(0), closeParen) &&
                this.sameColumn(parentStmt, openBrace);
     }
